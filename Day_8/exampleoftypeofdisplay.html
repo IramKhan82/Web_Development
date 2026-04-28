@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+        #d1{
+            background-color: turquoise;
+            color: black;
+            height: 100px;
+            width: 200px;
+        }
+        #d1:hover{
+         color: blue; 
+         background-color: burlywood; 
+         border: 3px solid black; 
+        }
+         #d2{
+            background-color: blue;
+            color: black;
+            height: 100px;
+            width: 200px;
+        }
+        #d2:hover{
+            color: pink;
+            background-color: beige;
+             border: 3px solid black; 
+        }
+        
+         #d3{
+            background-color: yellow;
+            color: black;
+            height: 100px;
+            width: 200px;
+        }
+        #d3:hover{
+            color: red;
+            background-color: chocolate;
+             border: 3px solid black; 
+        }
+        #main{
+            margin: 10px;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+    <div id="d1" align="center"> HTML </div>
+    <div id="d2" align="center" > CSS </div>
+    <div id="d3" align="center"> JS </div>
+    </div>
+    <script>
+        name="This is my web page";
+        /*document.write("<h1>"+ name + "</h1>")*/
+        /*console.log(name)*/
+        /*document.getElementById('d1').innerHTML=name;*/
+        alert(name)
+    </script>
+</body>
+</html>

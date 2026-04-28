@@ -1,0 +1,14 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Open tag2.html",
+            "file": "c:\\Users\\Home\\Desktop\\web develpment 2026\\Day_1\\tag2.html"
+        }
+    ]
+}

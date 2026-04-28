@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1{
+            background-color: goldenrod;
+            border: 2px yellowgreen solid;
+            border-radius: 20px;
+            height: 50px;
+            width: 1000px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #div2{
+            background-color: yellowgreen;
+            border: 2px green solid;
+            border-radius: 10px;
+            height: 80px;
+            width: 1000px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; ">Greatest Among Three Number</h1>
+     <fieldset>
+        <legend><h2>Greatest</h2></legend>
+        <div id="div1">
+            First Number:<input type="text" name="first" id="n1">
+            Second Number:<input type="text" name="second" id="n2">
+            Third Number:<input type="text" name="third" id="n3">
+            Result:<input type="text" name="result" id="result">
+        </div>
+        <br>
+        <div id="div2">
+            <button id="btn" onclick="great()">Click me!</button>
+        </div>
+    </fieldset>
+
+    <script>
+         function great(){
+            a=parseInt(document.getElementById("n1").value);
+            b=parseInt(document.getElementById("n2").value);
+            c=parseInt(document.getElementById("n3").value);
+
+            if(a>b){
+                if(a>c){
+                    document.getElementById("result").value=a+" is greatest";
+                }
+                else{
+                    document.getElementById("result").value=c+" is greatest";
+                }
+            }
+            else{
+                if(b>c){
+                    document.getElementById("result").value=b+" is greatest";
+                }
+                else{
+                    document.getElementById("result").value=c+" is greatest";
+                }
+            }
+         }
+    </script>
+</body>
+</html>

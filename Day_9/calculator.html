@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      background-color: khaki;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+    #h34 {
+      font-size: 50px;
+    }
+
+    #main {
+      padding: 5px 39px;
+      border: 1px solid #000;
+      background-color: white;
+      /* height: 600px;
+        width: 25%; */
+      border-radius: 20px;
+      box-shadow:
+        3px 3px 15px black,
+        -3px -3px 15px black;
+    }
+    input {
+      font-size: x-large;
+      padding: 5px 20px;
+      margin: 5px;
+      background-color: pink;
+      border-radius: 10px;
+    }
+    input:focus {
+      background-color: skyblue;
+    }
+    #btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      button {
+        background-color: white;
+        color: blue;
+        border: 2px solid blue;
+        border-radius: 50%;
+        font-size: x-large;
+        padding: 20px 10px;
+        margin: 5px;
+      }
+    }
+    .b {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      button {
+        font-size: x-large;
+        padding: 20px 25px;
+        margin: 10px;
+        background-color: green;
+        color: white;
+        border: 1px solid #000;
+        border-radius: 50%;
+      }
+    }
+  </style>
+  <body>
+    <!-- <h1 onmouseover="alert('welcome to the city of lakes')" onmouseout="alert('welcome to bhpl')">SISTEC</h1> -->
+
+    <div id="main">
+      <h1 id="h34">Calculator</h1>
+      <input type="number" id="n1" placeholder="enter first number" onclick="setFocus('n1')" />
+      <br />
+      <input type="number" id="n2" placeholder="enter second number"onclick="setFocus('n2')" />
+
+      <div id="btn">
+        <button onclick="calculate('+')">ADD</button>
+        <button onclick="calculate('-')">SUB</button>
+        <button onclick="calculate('*')">MUL</button>
+        <button onclick="calculate('/')">DIV</button>
+      </div>
+      <div id="num">
+        <div class="b">
+          <button onclick="appendNum(1)">1</button>
+          <button onclick="appendNum(2)">2</button>
+          <button onclick="appendNum(3)">3</button>
+        </div>
+        <div class="b">
+          <button onclick="appendNum(4)">4</button>
+          <button onclick="appendNum(5)">5</button>
+          <button onclick="appendNum(6)">6</button>
+        </div>
+        <div class="b">
+          <button onclick="appendNum(7)">7</button>
+          <button onclick="appendNum(8)">8</button>
+          <button onclick="appendNum(9)">9</button>
+        </div>
+        <div class="b">
+          <button onclick="appendNum(0)">0</button>
+        </div>
+      </div>
+
+      <h1>Result: <span id="result"></span></h1>
+    </div>
+
+    <script>
+      let a = "n1";
+      function setFocus(inputId) {
+        a = inputId;
+      }
+      function appendNum(number) {
+        document.getElementById(a).value += number;
+      }
+      function calculate(operator){
+       let c=parseInt(document.getElementById('n1').value);
+       let d=parseInt(document.getElementById('n2').value);
+       
+        document.getElementById('result').innerHTML=eval(c+operator+d);
+      }
+    </script>
+  </body>
+</html>

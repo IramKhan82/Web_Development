@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label >Enter the value of a:</label>
+    <br>
+    <input type="text" id="n1" placeholder="Enter the value of a:">
+    <br>
+    <br>
+    <label >Enter the value of b:</label>
+    <br>
+    <input type="text" id="n2" placeholder="Enter the value of b:">
+    <br>
+    <br>
+    <label >Enter the value of c:</label>
+    <br>
+    <input type="text" id="n3" placeholder="Enter the value of c:">
+    <br>
+    <br>
+    <button onclick="add()">ADD</button>
+    <button onclick="sub()">SUB</button>
+    <button onclick="mul()">MUL</button>
+    <button onclick="div()">DIV</button>
+    <br>
+    <br>
+    <input type="text" id="result">
+
+    <script>
+        function add()
+        {
+            x = parseInt(document.getElementById('n1').value);
+            y = parseInt(document.getElementById('n2').value);
+            z = parseInt(document.getElementById('n3').value);
+            var result;
+            result = x + y + z
+            document.getElementById('result').value=result;
+        }
+        function sub()
+        {
+            x = parseInt(document.getElementById('n1').value);
+            y = parseInt(document.getElementById('n2').value);
+            z = parseInt(document.getElementById('n3').value);
+            var result;
+            result = x - y - z
+            document.getElementById('result').value=result;
+        }
+        function mul()
+        {
+            x = parseInt(document.getElementById('n1').value);
+            y = parseInt(document.getElementById('n2').value);
+            z = parseInt(document.getElementById('n3').value);
+            var result;
+            result = x * y * z
+            document.getElementById('result').value=result;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            border: 4px dotted rebeccapurple;
+            margin: 5px;
+            padding: 5px;
+        }
+        button:hover{
+            border: 4px dashed brown;
+            margin: 5px;
+            padding: 5px;
+            background-color: bisque;
+            color: chocolate;
+        }
+    </style>
+</head>
+<body id="db">
+    <button onclick="bgcol('red')">red</button>
+    <button onclick="bgcol('violet')">violet</button>
+    <button onclick="bgcol('indigo')">indigo</button>
+    <button onclick="bgcol('blue')">blue</button>
+    <button onclick="bgcol('orange')">orange</button>
+    <button onclick="bgcol('pink')">pink</button>
+    <button onclick="bgcol('yellow')">yellow</button>
+    <button onclick="bgcol('aqua')">aqua</button>
+    <button onclick="bgcol('maroon')">maroon</button>
+    <button onclick="bgcol('green')">green</button>
+    <script>
+        function bgcol(x)
+        {
+            document.getElementById("db").style.backgroundColor=x;
+        }
+    </script>
+    
+</body>
+</html>

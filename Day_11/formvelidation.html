@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h5{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <br><br>
+    <br>
+    <div align="center"></div>
+    <form method="post" onsubmit="return check()">
+        <h5 id="error" align="center"></h5>
+        <table align="center" border="2" >
+            <tr>
+                <td>Name</td>
+                <td><input type="text" name="name" id="name"></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="pwd" id="pwd"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input type="submit" value="Sign In"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+<script align="center">
+    function check()
+    {
+        name = document.getElementById("name").value;
+        pwd = document.getElementById("pwd").value;
+        flag = 1;
+        message="";
+        m= new Array();
+        let namep = /^[A-Za-z]+$/;
+    if(name == ""){
+        m[0]="name is required";
+        flag=0;
+    }
+    elseif(!name.match(namep)){
+        m[0]="name can be only character not numbers";
+        flag=0; 
+    }
+    else{
+            m[0]="";
+        }
+    if(pwd == ""){
+        m[1]="password is required"
+        flag=0;
+    }
+    else if(pwd.length<8){ 
+        m[1]="password should be more than 8 characters.";
+        flag=0
+    }
+    else{
+        m[1]="";
+    }
+    if(flag == 0){
+        for(let i=0;i<2;i++){
+            message=message+m[i]+"<br>"
+        }
+    document.getElementById("error").innerHTML=message;
+    return false;
+    }
+    else{
+        return true;
+    }
+    }
+</script>
+</html>

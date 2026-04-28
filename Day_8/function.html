@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            color: aqua;
+        }
+        #i1{
+            background-color: black;
+        }
+        #i2{
+            background-color: burlywood;
+        }
+        #i3{
+            background-color: red;
+        }
+        #i4{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="sum()" id="i1">ADD</button>
+    <script>
+        function sum()
+        {
+            var x=prompt("enter the value of x");
+            var y=prompt("enter the value of y");
+            var z;
+            z=parseInt(x)+parseInt(y);
+            alert("z="+z)
+        }
+    </script>
+     <button onclick="sub()" id="i2">SUB</button>
+    <script>
+        function sub()
+        {
+            var x=prompt("enter the value of x");
+            var y=prompt("enter the value of y");
+            var z;
+            z=parseInt(x)-parseInt(y);
+            alert("z="+z)
+        }
+    </script>
+     <button onclick="div()" id="i3">DIV</button>
+    <script>
+        function div()
+        {
+            var x=prompt("enter the value of x");
+            var y=prompt("enter the value of y");
+            var z;
+            z=parseInt(x)/parseInt(y);
+            alert("z="+z)
+        }
+    </script>
+    <button onclick="mul()" id="i4">MUL</button>
+    <script>
+        function mul()
+        {
+            var x=prompt("enter the value of x");
+            var y=prompt("enter the value of y");
+            var z;
+            z=parseInt(x)*parseInt(y);
+            alert("z="+z)
+        }
+    </script>
+        
+
+</body>
+</html>

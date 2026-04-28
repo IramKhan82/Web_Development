@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      font-size: large;
+      input {
+        font-size: large;
+        border-color: palevioletred;
+      }
+      div{
+        background-color: rgb(227, 153, 200);
+        text-align: center;
+        padding: 20px 10px;
+        border: 2px dashed black;
+        border-radius: 20px;
+      }
+      #s{
+        background-color: rgb(124, 193, 203);
+        border: 2px dashed black;
+        padding: 30px;
+        select{
+            font-size: large;
+        }
+      }
+    }
+  </style>
+  <body>
+    <fieldset>
+      <legend>Switch</legend>
+      <div>
+        <label for="n1">First Number:</label>
+        <input type="number" id="n1" />
+        <label for="n2">Second Number:</label>
+        <input type="number" id="n2" />
+        <label for="result">Result:</label>
+        <input type="number" id="result" />
+      </div> <br>
+      <div id="s"><select name="button" id="btn" onchange="sum(value)">
+        <option value="">--SELECT--</option>
+        <option value="add">ADD</option>
+        <option value="sub">SUB</option>
+        <option value="mul">MUL</option>
+        <option value="div">DIV</option>
+      </select>
+      <span id="side"></span>
+    </div>
+    </fieldset>
+    <script>
+      function sum(add) {
+        x = parseInt(document.getElementById("n1").value);
+        y = parseInt(document.getElementById("n2").value);
+        switch (add) {
+          case 'add':
+            document.getElementById("result").value = x + y;
+            document.getElementById("side").innerHTML="You pressed OK!";
+            alert("You calculate addition");
+            break;
+          case 'sub':
+            document.getElementById("result").value = x - y;
+            alert("You calculate subtraction");
+            break;
+          case 'mul':
+            document.getElementById("result").value = x * y;
+            alert("You calculate multiplication");
+            break;
+            case 'div':
+            document.getElementById("result").value = x / y;
+            alert("You calculate division");
+            break;
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main{
+            height: 150px;
+            width: 150px;
+            background-color: red;
+            position: relative;
+            padding: 5px;
+            margin: 5px;
+            box-shadow: 5px 5px aqua;
+            border: 2px solid black;
+            animation: colorchange 5s  3s infinite;
+        }
+        @keyframes colorchange{
+            0%{
+                background-color: aquamarine;
+                box-shadow: 5px 5px 5px crimson;
+                left: 0px;
+                top: 0px;
+            }
+            25%{
+                background-color: goldenrod;
+                box-shadow: 5px 5px 5px palevioletred;
+                left: 300px;
+                top: 0px;
+            }
+            50%{
+                background-color: burlywood;
+                box-shadow: 5px 5px 5px teal;
+                left: 300px;
+                top: 300px;
+            }
+            75%{
+                background-color: greenyellow;
+                box-shadow: 5px 5px 5px orangered;
+                left: 0px;
+                top: 300px;
+            }
+            100%{
+                background-color: plum;
+                box-shadow: 5px 5px 5px maroon;
+                top: 0px;
+                left: 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+
+    </div>
+</body>
+</html>

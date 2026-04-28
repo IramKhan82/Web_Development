@@ -1,0 +1,26 @@
+body{
+    background-image: url(gun.jpeg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+     background-size: cover;
+    background-origin: content-box;
+}
+table{
+    height:300px ;
+    width: 300px;
+    background-color: rgb(248, 160, 211);
+    margin: auto;
+}
+h1{
+    text-align: center;
+    background-color: white;
+    border-radius: 20px;
+}
+h1:hover{
+   background-color: rgb(78, 172, 248);
+   
+}
+input:focus{
+    text-align:start;
+   background-color: rgb(154, 225, 247);
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: plum ;
+        }
+
+    </style>
+</head>
+<body>
+    <div style="background-color: white; border: 5px dashed black; height: 1000px; width: 500px; justify-content: center; align-items: center; margin: auto;" align="center" >
+        <h1 style="text-decoration: underline dashed;">REGISTRATION FORM</h1>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h5 id="error" style="color: red;"></h5>
+        <div style="border: 5px double black; width: 300px; height: 250px; ">
+            <form method="post" onsubmit="return check()" >
+            
+            <br>
+            <br>
+            <br>
+            <table align="center">
+            <tr>
+               <td><label> Name:</label></td>
+               <td><input type="text" name="name" id="name" placeholder=" Your Name "></td>
+            </tr>
+            <tr>
+                <td><label>Gender</label></td>
+                <td><input type="radio" name="gender" value="Male" required>Male <input type="radio" name="gender" value="Female" required>Female</td>
+            </tr>
+            <tr>
+               <td><label>User Name:</label></td>
+               <td><input type="text" name="username" id="username" placeholder=" Your User Name "></td>
+            </tr>
+            <tr>
+               <td><label> Password:</label></td>
+               <td><input type="password" name="pwd" id="pwd" placeholder=" Your Password "></td>
+            </tr>
+            <tr colspan="2" align="center">
+                <td><input type="submit" value="Submit">&nbsp;<input type="reset" value="Clear"></td>
+            </tr>
+            </table>
+        </form>
+    </div>
+        </div>
+    </div>
+</body>
+<script>
+    function check(){
+        name=document.getElementById('name').value;
+        username=document.getElementById('username').value;
+        pwd=document.getElementById('pwd').value;
+        flag=1;
+        message="";
+        m=new Array();
+        let namep=/^[A-Za-z]+$/;
+        if(name==""){
+            m[0]="*Name is required";
+            flag=0;
+        }
+        else if(!name.match(namep)){
+            m[0]="*Name should only be char";
+            flag=0;
+        }
+        else{
+            m[0]="";
+
+        }
+        if(username==""){
+            m[1]="*User Name is required";
+            flag=0;
+        }
+        else{
+            m[1]="";
+
+        }
+        if(pwd==""){
+            m[2]="*password is required";
+            flag=0;
+        }
+        else if(pwd.length<8){
+            m[2]="*password should be more than 8 char";
+            flag=0;
+        }
+        else{
+            m[2]="";
+
+        }
+        if(flag==0){
+            for(let i=0;i<3;i++){
+                message=message+m[i]+"<br>"
+            }
+            document.getElementById('error').innerHTML=message;
+            return false;
+        }
+        else{
+            return true;
+        }
+    }        
+</script>
+</html>

@@ -1,0 +1,13 @@
+body{
+    background-color: brown;
+}
+h1{
+    color: aliceblue;
+    text-align: center;
+    border: 3px solid black;
+}
+p{
+    color: crimson;
+    font-size: 30px;
+    background-color: blanchedalmond;
+}

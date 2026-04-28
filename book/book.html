@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Bookings
+        </title>
+        <style>
+body {
+      font-family: 'Arial', sans-serif;
+      background: #111;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .form-container {
+      max-width: 700px;
+      margin: 50px auto;
+      padding: 30px;
+      background: rgba(0, 0, 0, 0.0); 
+      border-radius: 15px;
+      
+    }
+
+    h2 {
+      font-size: 30px;
+      font-weight: bold;
+      background: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 254, 254), rgb(255, 255, 255));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color:rgb(255, 255, 255);
+      letter-spacing: 2px;
+      text-align: center;
+
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      text-shadow: 0px 0px 10px rgba(243, 236, 236, 0.6),
+                   0px 0px 20px rgba(7, 15, 14, 0.8);}
+    }
+
+    label {
+      display: block;
+      margin: 15px 0 5px;
+      font-weight: bold;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      margin-bottom: 10px;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    input[type="checkbox"] {
+      width: auto;
+      margin-right: 10px;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 15px;
+      background-color: #8f8c8b;
+      border: none;
+      border-radius: 10px;
+      color: #fff;
+      font-size: 18px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: 0.3s;
+    }
+
+    .submit-btn:hover {
+      background-color: #000000;
+    }
+
+    .section {
+      margin-top: 20px;
+      border-top: 1px solid #444;
+      padding-top: 20px;
+    }
+  </style>
+</head>
+<body>
+    <video autoplay muted loop style="position: fixed;
+     top: 0; 
+     left: 0;
+      width: 100%; 
+      height: 100%; 
+      object-fit: cover;
+       opacity:0.9; 
+       z-index: -1;">
+  <source src="pagani video.mp4" type="video/mp4">
+</video>
+
+  <div class="form-container">
+    <h2>Pagani Motors Booking Form</h2>
+
+    <!-- Basic Information -->
+    <div class="section">
+      <label>Full Name</label>
+      <input type="text" placeholder="Enter your full name" required>
+
+      <label>Email Address</label>
+      <input type="email" placeholder="Enter your email" required>
+
+      <label>Phone Number (with country code)</label>
+      <input type="tel" placeholder="+91 1234567890" required>
+
+      <label>Address (City, Country)</label>
+      <input type="text" placeholder="City, Country" required>
+    </div>
+
+    <!-- Car Selection -->
+    <div class="section">
+      <label>Select Model</label>
+      <select required>
+        <option value="">--Select Model--</option>
+        <option value="huayra">Pagani Huayra</option>
+        <option value="utopia">Pagani Utopia</option>
+        <option value="zonda">Pagani Zonda</option>
+      </select>
+
+      <label>Variant / Edition</label>
+      <input type="text" placeholder="e.g., Roadster, BC, Tricolore">
+
+      <label>Preferred Color / Custom Color Request</label>
+      <input type="text" placeholder="Enter your preferred color">
+    </div>
+
+    <!-- Booking Preferences -->
+    <div class="section">
+      <label>Booking Type</label>
+      <select required>
+        <option value="">--Select Booking Type--</option>
+        <option value="testdrive">Test Drive</option>
+        <option value="purchase">Purchase</option>
+        <option value="preorder">Pre-Order</option>
+      </select>
+
+      <label>Preferred Date & Time</label>
+      <input type="date" required>
+      <input type="time" required>
+
+      <label>Delivery Preference</label>
+      <select>
+        <option value="dealership">Pickup at Dealership</option>
+        <option value="home">Home Delivery</option>
+      </select>
+
+      <label>Dealership Location</label>
+      <select>
+        <option value="">--Select Dealership--</option>
+        <option value="monaco">Monaco</option>
+        <option value="milan">Milan</option>
+        <option value="losangeles">Los Angeles</option>
+        <option value="hongkong">Hong Kong</option>
+      </select>
+    </div>
+
+    <!-- Customization -->
+    <div class="section">
+      <label>Interior Options</label>
+      <input type="text" placeholder="Leather, Alcantara, Carbon Fiber, etc.">
+
+      <label>Additional Features</label>
+      <input type="text" placeholder="Custom Exhaust, Wheels, Finishes">
+
+      <label>Special Requests</label>
+      <textarea rows="3" placeholder="Your personal customization wishes"></textarea>
+    </div>
+
+    <!-- Payment & Confirmation -->
+    <div class="section">
+      <label>Payment Method</label>
+      <select>
+        <option value="">--Select Payment Method--</option>
+        <option value="bank">Bank Transfer</option>
+        <option value="card">Credit/Debit Card</option>
+        <option value="crypto">Crypto</option>
+      </select>
+
+      <label>Down Payment Amount</label>
+      <input type="number" placeholder="Enter amount (if required)">
+
+      <label>Upload ID/License</label>
+      <input type="file">
+
+      <label>
+        <input type="checkbox" required>
+        I agree to the Terms & Conditions
+      </label>
+
+      <label>
+        <input type="checkbox" required>
+        I agree to the Privacy Policy
+      </label>
+    </div>
+
+    <!-- Luxury Add-ons -->
+    <div class="section">
+      <label>Request for Factory Tour</label>
+      <select>
+        <option value="no">No</option>
+        <option value="yes">Yes</option>
+      </select>
+
+      <label>Services</label>
+      <select>
+        <option value="no">No</option>
+        <option value="yes">Yes</option>
+      </select>
+
+      <label>Insurance & Extended Warranty Options</label>
+      <input type="text" placeholder="Enter options if desired">
+    </div>
+
+    <!-- Submit -->
+    <button class="submit-btn" type="submit">Reserve My Pagani</button>
+  </div>
+  </body>
+  <htm

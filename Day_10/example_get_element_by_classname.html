@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="p1">Iram khan</h1>
+    <h1 class="p1">Iram khan</h1>
+    <h2 class="p2">Iram khan</h2>
+    <h2 class="p2">Iram khan</h2>
+    <h3 class="p2">Iram khan</h3>
+    <p class="p3">Iram khan</p>
+    <p class="p3">Iram khan</p>
+    <button onclick="counth()">count tags</button>
+    <script>
+        function counth()
+        {
+            var a=prompt("enter the tag name")
+            var t=document.getElementsByClassName(a);
+            alert("total no of heading="+t.length);
+        }
+    </script>
+</body>
+</html>

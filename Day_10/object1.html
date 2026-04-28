@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="p1"></h1>
+    <h1 id="p2"></h1>
+    <h1 id="p3"></h1>
+    <hr>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <script>
+        var student = {
+            name: "Kahkasha Begum",
+            roll_no: 19,
+            city: "Bhopal"
+        }
+        document.getElementById('p1').innerHTML = student.name
+        document.getElementById('p2').innerHTML = student.roll_no
+        document.getElementById('p3').innerHTML = student.city
+        var person = new Object();
+        person.name = "Hifza Hasan";
+        person.age = 21;
+        person.city = "Bhopal";
+        document.getElementById('d1').innerHTML = person.name
+        document.getElementById('d2').innerHTML = person.age
+    </script>
+</body>
+</html>

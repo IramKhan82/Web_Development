@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <style>
+         
+        }
+        #div1{
+            background-color: rgb(143, 41, 72);
+            height: 40px;
+            width: 1100px;
+            padding: 10px;       
+            align-items: center;
+            border-radius: 10px;
+            text-align: center;
+            border: 3px solid rgb(9, 9, 9);
+        }
+         #div2{
+            background-color: rgb(81, 9, 30);
+            height: 40px;
+            width: 1100px;
+            padding: 10px;
+            align-items: center;
+            text-align: center;
+            border-radius: 10px;
+            border: 3px solid black;
+        }
+        select{
+            text-align: center;
+        }
+        button{
+            border-radius: 7px;
+        }
+        </style>
+</head>
+<body>
+    <h1 style="text-align: center; ">Voter or Not</h1>
+        <fieldset>
+        <legend><h1>Vote</h1></legend>
+        <div id="div1">
+            Enter Your Age:<input type="text" id="num1">
+        </div>
+        <br>
+        <div id="div2">
+            <button onclick="vote()">Click me.!</button>
+        </div>
+        </fieldset>
+
+        <script>
+            function vote(){
+                var a = parseInt(document.getElementById("num1").value);
+                if(a>=18){
+                    alert("You are Eligible for Voting :)")
+                }
+                else
+                {
+                    alert("You are not Eligible for voting :'(")
+                }
+            }
+        </script>
+    
+</body>
+</html>
