@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Huayra Series</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(to bottom, black, rgb(0, 0, 0), rgb(50, 50, 50), rgb(111, 101, 101));
+      background-attachment: fixed;
+      font-family: Arial, sans-serif;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 20px;
+    }
+
+    h1 {
+      margin: 20px 0;
+      font-size: 3rem;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.6),
+                   0px 0px 15px rgba(0, 0, 0, 0.8);
+    }
+
+    h2 {
+      margin: 20px 0;
+      font-size: 2rem;
+      text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.3);
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    .gallery {
+      display:list-item;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      width: 90%;
+      max-width: 1200px;
+    }
+
+    .car {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+  background: #111;
+  padding: 10px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .car img {
+      width: 100%;
+      display: block;
+      border-radius: 12px;
+      transition: transform 0.5s ease;
+    }
+
+    .car:hover {
+  transform: translateY(-10px); 
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.9), 
+              0px 0px 25px rgba(255, 255, 255, 0.15); 
+}
+
+  
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.95);
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      text-align: center;
+      padding: 40px;
+      z-index: 1000;
+      overflow-y: auto;
+    }
+
+    .modal.active {
+      display: flex;
+    }
+
+    .modal h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 10px black;
+    }
+
+    .modal p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      line-height: 1.6;
+      margin-top: 20px;
+    }
+
+    .close-btn {
+      margin-top: 30px;
+      padding: 10px 20px;
+      background: crimson;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
+
+    .close-btn:hover {
+      background: darkred;
+    }
+
+  
+    .modal-gallery {
+      display: flex;
+      gap: 15px;
+      overflow-x: auto;
+      padding: 10px;
+      margin-bottom: 20px;
+      scroll-behavior: smooth;
+      max-width: 90%;
+    }
+
+    .modal-gallery img {
+      height: 250px;
+      border-radius: 12px;
+      flex-shrink: 0;
+      transition: transform 0.3s ease;
+    }
+
+    .modal-gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    
+    .modal-gallery::-webkit-scrollbar {
+      height: 10px;
+    }
+
+    .modal-gallery::-webkit-scrollbar-track {
+      background: #111;
+      border-radius: 10px;
+    }
+
+    .modal-gallery::-webkit-scrollbar-thumb {
+      background: linear-gradient(90deg, #000, #333);
+      border-radius: 10px;
+      border: 2px solid #111;
+    }
+
+    .modal-gallery::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(90deg, #222, #555);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Huayra Series</h1>
+
+  <div class="gallery">
+    <!-- Car 1 -->
+    <div class="car" onclick="openModal('modal1')">
+      <h2>Pagani Huayra</h2>
+      <img src="huayra1.jpg" alt="Huayra">
+    </div>
+
+    <!-- Car 2 -->
+    <div class="car" onclick="openModal('modal2')">
+      <h2>Pagani Huayra BC</h2>
+      <img src="huayra BC.jpg" alt="Huayra BC">
+    </div>
+
+    <!-- Car 3 -->
+    <div class="car" onclick="openModal('modal3')">
+      <h2>Pagani Huayra Roadster BC</h2>
+      <img src="roadster BC.avif" alt="Huayra Roadster BC">
+    </div>
+  </div>
+
+  <!-- Modal Car 1 -->
+  <div id="modal1" class="modal">
+    <h2>Pagani Huayra</h2>
+    <div class="modal-gallery">
+      <img src="huayra1.jpg" alt="Huayra Front">
+      <img src= "huayra2.png"Huayra Side">
+      <img src="huayra3.png" alt="Huayra Interior">
+    </div>
+    <p>
+      The <b>Pagani Huayra</b>, first launched in 2011, was the successor to the legendary Zonda and marked a new era for Pagani.<br>
+      Powered by a 6.0-liter twin-turbocharged AMG V12 producing around 730 horsepower, it became famous for its cutting-edge active aerodynamics, where flaps on the body adjust in real-time for maximum stability and performance.<br>
+    </p>
+    <button class="close-btn" onclick="closeModal('modal1')">Close</button>
+  </div>
+
+  <!-- Modal Car 2 -->
+  <div id="modal2" class="modal">
+    <h2>Pagani Huayra BC</h2>
+    <div class="modal-gallery">
+      <img src="huayraBC1.png" alt="Huayra BC Front">
+      <img src="huayraBC2.png" alt="Huayra BC Side">
+      <img src="huayraBC3.png" alt="Huayra BC Interior">
+    </div>
+    <p>
+      In 2016, Pagani introduced the <b>Huayra BC</b>, a more extreme and track-focused version dedicated to Benny Caiola, Pagani’s first customer and close friend.<br>
+      It featured a lighter body thanks to advanced composite materials, along with an upgraded AMG V12 producing nearly 789 horsepower.<br>
+      
+    </p>
+    <button class="close-btn" onclick="closeModal('modal2')">Close</button>
+  </div>
+
+  <!-- Modal Car 3 -->
+  <div id="modal3" class="modal">
+    <h2>Pagani Huayra Roadster BC</h2>
+    <div class="modal-gallery">
+      <img src="huayraRoadster1.png" alt="Roadster BC Front">
+      <img src="huayraRoadster2.png" alt="Roadster BC Side">
+      <img src="huayraRoadster3.png" alt="Roadster BC Interior">
+    </div>
+    <p>
+      Three years later, in 2019, Pagani unveiled the <b>Huayra Roadster BC</b>, an open-top evolution of the BC that combined breathtaking power with an unmatched open-air driving thrill.<br>
+      Using innovative carbon-titanium materials, it was even lighter and stiffer, while still packing 791 horsepower from the same AMG V12.<br>
+      
+    </p>    
+    <button class="close-btn" onclick="closeModal('modal3')">Close</button>
+  </div>
+
+  <script>
+    function openModal(id) {
+      document.getElementById(id).classList.add("active");
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).classList.remove("active");
+    }
+  </script>
+</body>
+</html>

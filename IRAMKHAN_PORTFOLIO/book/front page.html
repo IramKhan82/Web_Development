@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagani Motors</title>
+  <!-- Importing premium font from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      min-height: 100%;
+      background: linear-gradient(to bottom, black, rgb(0, 0, 0), rgb(50, 50, 50), rgb(111, 101, 101));
+      background-attachment: fixed;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .cg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("huayraroadster2.png") no-repeat center center/cover;
+      opacity: 0.3; 
+      z-index: -2;
+    }
+    nav {
+      width: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 12px 0;
+      display: flex;
+      justify-content: center;
+      gap: 35px;
+      position: sticky;
+      top: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+      transition: color 0.3s;
+      text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.6),
+                   0px 0px 15px rgba(0, 0, 0, 0.8);
+    }
+
+    nav a:hover {
+      color: grey;
+      text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.6),
+                   0px 0px 15px rgba(0, 0, 0, 0.8);
+    }
+
+    .logo {
+      margin-top: 20px;
+      max-width: 350px;
+      height: auto;
+    }
+
+    .pagani-title {
+      margin-top: 40px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 80px;
+      text-transform: uppercase;
+      letter-spacing: 8px;
+      background: linear-gradient(to right, #FFFFFF, #C0C0C0, #999999);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0px 0px 12px rgba(255,255,255,0.8),
+                   0px 0px 20px rgba(0,0,0,0.8);
+    }
+
+    .car-image-container {
+      margin-top: 30px;
+    }
+
+    .car {
+      max-width: 1000px;
+      width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="cg"></div>
+
+  <nav>
+    
+    <a href="history.html">History</a>
+    <a href="cars.html">Cars</a>
+    <a href="book.html">Book Now</a>
+  </nav>
+
+  <img src="pagani.png" alt="Pagani Motors Logo" class="logo">
+
+  <div class="pagani-title">  
+    PAGANI MOTORS
+  </div>
+
+  <div class="car-image-container">
+    <img src="car2.png.png" class="car" alt="Pagani Car">
+  </div>
+
+</body>
+</html>
