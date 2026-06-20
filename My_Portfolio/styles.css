@@ -682,10 +682,8 @@ body {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);  
-  grid-template-columns: repeat(2, 400px);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 24px;
-  justify-content: center;
 }
 
 .skill-category {
@@ -1551,7 +1549,110 @@ body {
     grid-template-columns: 1fr;
   }
 }
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
 
+@media screen and (max-width: 768px) {
+
+  .hero-content,
+  .about-content,
+  .contact-content,
+  .resume-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .title-name {
+    font-size: 42px;
+  }
+
+  .hero-stats {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skills-grid,
+  .soft-skills-grid,
+  .projects-grid,
+  .certifications-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image {
+    max-width: 300px;
+    margin: auto;
+  }
+
+  .image-frame {
+    width: 280px;
+    height: 340px;
+    margin: auto;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  .timeline-item {
+    padding-left: 25px;
+  }
+
+  .timeline-badge {
+    position: static;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+}
+
+/* Small Mobile */
+
+@media screen and (max-width: 480px) {
+
+  .container {
+    padding: 0 15px;
+  }
+
+  .title-name {
+    font-size: 34px;
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .hero-description,
+  .about-description {
+    font-size: 14px;
+  }
+}
 /* ==========================================
    CERTIFICATE MODAL
    ========================================== */
